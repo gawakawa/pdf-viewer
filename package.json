@@ -1,14 +1,28 @@
 {
-	"name": "pnpm",
-	"license": "ISC",
+	"name": "pdf-viewer-frontend",
+	"version": "0.0.0",
+	"private": true,
 	"type": "module",
 	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
 		"lint": "oxlint",
+		"preview": "vite preview",
 		"test": "vitest run"
 	},
+	"dependencies": {
+		"pdfjs-dist": "^6.2.108",
+		"react": "^19.2.8",
+		"react-dom": "^19.2.8"
+	},
 	"devDependencies": {
-		"oxlint": "^1.32.0",
-		"oxlint-tsgolint": "^0.25.0",
+		"@types/node": "^24.13.3",
+		"@types/react": "^19.2.17",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.4",
+		"oxlint": "^1.75.0",
+		"oxlint-tsgolint": "^7.0.2001",
+		"vite": "^8.2.0",
 		"vitest": "^4.1.10"
 	}
 }

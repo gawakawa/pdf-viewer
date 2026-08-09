@@ -1,44 +1,32 @@
 {
 	// Visit https://aka.ms/tsconfig to read more about this file
 	"compilerOptions": {
-		// File Layout
-		// "rootDir": "./src",
-		// "outDir": "./dist",
-
 		// Environment Settings
-		// See also https://aka.ms/tsconfig/module
-		"module": "nodenext",
+		"module": "esnext",
 		"target": "esnext",
-		"types": [],
-		// For nodejs:
-		// "lib": ["esnext"],
-		// "types": ["node"],
-		// and npm install -D @types/node
+		"lib": ["ESNext", "DOM"],
+		"types": ["vite/client", "node"],
 
-		// Other Outputs
-		"sourceMap": true,
-		"declaration": true,
-		"declarationMap": true,
+		// Bundler mode
+		"moduleResolution": "bundler",
+		"jsx": "react-jsx",
+		"noEmit": true,
 
 		// Stricter Typechecking Options
 		"noUncheckedIndexedAccess": true,
 		"exactOptionalPropertyTypes": true,
 
-		// Style Options
-		// "noImplicitReturns": true,
-		// "noImplicitOverride": true,
-		// "noUnusedLocals": true,
-		// "noUnusedParameters": true,
-		// "noFallthroughCasesInSwitch": true,
-		// "noPropertyAccessFromIndexSignature": true,
-
 		// Recommended Options
 		"strict": true,
-		"jsx": "react-jsx",
 		"verbatimModuleSyntax": true,
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"skipLibCheck": true
+		"skipLibCheck": true,
+
+		// pdfjs-dist/web/pdf_viewer.mjs に隣接する .d.mts が無く自動解決されないため明示する
+		"paths": {
+			"pdfjs-dist/web/pdf_viewer.mjs": ["./node_modules/pdfjs-dist/types/web/pdf_viewer.d.ts"]
+		}
 	}
 }
