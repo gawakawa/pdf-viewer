@@ -7,7 +7,7 @@ import type { PdfViewerHandle } from './pdf';
 type OutlineItem = Awaited<ReturnType<PDFDocumentProxy['getOutline']>>[number];
 type OutlineDest = NonNullable<OutlineItem['dest']>;
 
-type LastPosition = { page: number; scrollTopRatio: number };
+type LastPosition = { scrollTopRatio: number };
 
 const lastPositionKey = (fingerprint: string) => `pdf-viewer:last-position:${fingerprint}`;
 
@@ -19,14 +19,12 @@ const readLastPosition = (fingerprint: string): LastPosition | undefined => {
 		if (
 			typeof parsed !== 'object' ||
 			parsed === null ||
-			!('page' in parsed) ||
 			!('scrollTopRatio' in parsed) ||
-			typeof parsed.page !== 'number' ||
 			typeof parsed.scrollTopRatio !== 'number'
 		) {
 			return undefined;
 		}
-		return { page: parsed.page, scrollTopRatio: parsed.scrollTopRatio };
+		return { scrollTopRatio: parsed.scrollTopRatio };
 	} catch {
 		return undefined;
 	}
@@ -77,9 +75,6 @@ const App = () => {
 		const container = containerRef.current;
 		if (!container || handleRef.current) return;
 		handleRef.current = createPdfViewer(container);
-		return () => {
-			cleanupRef.current?.();
-		};
 	}, []);
 
 	const openFile = useCallback(async (file: File) => {
@@ -124,7 +119,7 @@ const App = () => {
 			saveTimeoutId = window.setTimeout(() => {
 				const maxScrollTop = container.scrollHeight - container.clientHeight;
 				const scrollTopRatio = maxScrollTop > 0 ? container.scrollTop / maxScrollTop : 0;
-				writeLastPosition(fingerprint, { page: handle.viewer.currentPageNumber, scrollTopRatio });
+				writeLastPosition(fingerprint, { scrollTopRatio });
 			}, 300);
 		};
 		container.addEventListener('scroll', onScroll);
