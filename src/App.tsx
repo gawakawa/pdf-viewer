@@ -95,8 +95,10 @@ const App = () => {
 		}
 
 		const fingerprint = doc.fingerprints[0];
+		const previousDoc = handle.viewer.pdfDocument;
 		handle.linkService.setDocument(doc, null);
 		handle.viewer.setDocument(doc);
+		void previousDoc?.loadingTask.destroy();
 
 		const outlineItems = await doc.getOutline();
 		setOutline(outlineItems ?? []);
