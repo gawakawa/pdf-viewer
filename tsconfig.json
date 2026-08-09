@@ -22,11 +22,6 @@
 		"isolatedModules": true,
 		"noUncheckedSideEffectImports": true,
 		"moduleDetection": "force",
-		"skipLibCheck": true,
-
-		// pdfjs-dist/web/pdf_viewer.mjs に隣接する .d.mts が無く自動解決されないため明示する
-		"paths": {
-			"pdfjs-dist/web/pdf_viewer.mjs": ["./node_modules/pdfjs-dist/types/web/pdf_viewer.d.ts"]
-		}
+		"skipLibCheck": true
 	}
 }
