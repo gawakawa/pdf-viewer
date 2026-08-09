@@ -100,9 +100,8 @@ const App = () => {
 		handle.viewer.setDocument(doc);
 		void previousDoc?.loadingTask.destroy();
 
-		const outlineItems = await doc.getOutline();
-		setOutline(outlineItems ?? []);
 		setFileName(file.name);
+		void doc.getOutline().then((outlineItems) => setOutline(outlineItems ?? []));
 
 		const lastPosition = fingerprint ? readLastPosition(fingerprint) : undefined;
 
