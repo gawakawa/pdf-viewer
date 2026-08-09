@@ -1,6 +1,7 @@
 {
 	"$schema": "./node_modules/oxlint/configuration_schema.json",
 	"plugins": ["react", "typescript", "oxc"],
+	"jsPlugins": ["eslint-plugin-react-you-might-not-need-an-effect"],
 	"options": {
 		"typeAware": true,
 		"typeCheck": true
@@ -15,6 +16,13 @@
 		"typescript/no-explicit-any": "error",
 		"typescript/no-non-null-assertion": "error",
 		"react/rules-of-hooks": "error",
-		"react/only-export-components": ["warn", { "allowConstantExport": true }]
+		"react/only-export-components": ["warn", { "allowConstantExport": true }],
+		"react-you-might-not-need-an-effect/no-derived-state": "error",
+		"react-you-might-not-need-an-effect/no-chain-state-updates": "error",
+		"react-you-might-not-need-an-effect/no-event-handler": "error",
+		"react-you-might-not-need-an-effect/no-pass-live-state-to-parent": "error",
+		"react-you-might-not-need-an-effect/no-pass-data-to-parent": "error",
+		"react-you-might-not-need-an-effect/no-external-store-subscription": "error",
+		"react-you-might-not-need-an-effect/no-initialize-state": "error"
 	}
 }
