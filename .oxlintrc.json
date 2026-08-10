@@ -17,6 +17,7 @@
 		"typescript/no-non-null-assertion": "error",
 		"react/rules-of-hooks": "error",
 		"react/only-export-components": ["warn", { "allowConstantExport": true }],
+		"react/react-compiler": ["error", { "reportAllBailouts": true }],
 		"react-you-might-not-need-an-effect/no-derived-state": "error",
 		"react-you-might-not-need-an-effect/no-chain-state-updates": "error",
 		"react-you-might-not-need-an-effect/no-event-handler": "error",
