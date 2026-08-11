@@ -1,0 +1,67 @@
+.app {
+	display: flex;
+	height: 100%;
+}
+
+.sidebar {
+	width: 260px;
+	flex-shrink: 0;
+	overflow-y: auto;
+	border-right: 1px solid #ddd;
+	padding: 8px;
+}
+
+.sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 12px;
+}
+
+.sidebar > ul {
+	padding-left: 0;
+}
+
+.sidebar button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	text-align: left;
+	padding: 2px 0;
+}
+
+.main {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+}
+
+.toolbar {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+.file-input input {
+	display: none;
+}
+
+.zoom-controls {
+	display: flex;
+	gap: 4px;
+}
+
+.viewer-area {
+	position: relative;
+	flex: 1;
+	min-height: 0;
+}
+
+.pdf-container {
+	position: absolute;
+	inset: 0;
+	overflow: auto;
+	background: #808080;
+}

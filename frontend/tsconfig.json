@@ -1,0 +1,27 @@
+{
+	// Visit https://aka.ms/tsconfig to read more about this file
+	"compilerOptions": {
+		// Environment Settings
+		"module": "esnext",
+		"target": "esnext",
+		"lib": ["ESNext", "DOM"],
+		"types": ["vite/client", "node"],
+
+		// Bundler mode
+		"moduleResolution": "bundler",
+		"jsx": "react-jsx",
+		"noEmit": true,
+
+		// Stricter Typechecking Options
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+
+		// Recommended Options
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noUncheckedSideEffectImports": true,
+		"moduleDetection": "force",
+		"skipLibCheck": true
+	}
+}

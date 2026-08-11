@@ -4,14 +4,14 @@ _: {
     let
       pnpm = config.pnpmPackage;
       nodejs = config.nodejsPackage;
-      src = ./..;
+      src = ../frontend;
 
       pnpmDeps = pkgs.fetchPnpmDeps {
         pname = "pnpm-project-deps";
         version = "1.0.0";
         inherit src pnpm;
         fetcherVersion = 3;
-        hash = "sha256-4XfzQPSA/FrQ37es8xprD+c1zdxPECzsxwwt/2rzWAo=";
+        hash = "sha256-W9T8pvHHQJL1upvhIR+PCwW9WH3YO+Za22VliDDBIGQ=";
       };
 
       nodeModules = pkgs.stdenvNoCC.mkDerivation {

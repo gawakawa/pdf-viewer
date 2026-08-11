@@ -17,11 +17,12 @@ _: {
           extraPackages = [ config.nodejsPackage ]; # tsgolint (type-aware) needs node
           entry = toString (
             pkgs.writeShellScript "oxlint-entry" ''
+              cd frontend
               source ${config.packages.nodeModulesSetup}
               exec ${pkgs.oxlint}/bin/oxlint
             ''
           );
-          files = "\\.(ts|tsx|js|jsx)$";
+          files = "^frontend/.*\\.(ts|tsx|js|jsx)$";
           pass_filenames = false;
         };
         workflow-timeout = {

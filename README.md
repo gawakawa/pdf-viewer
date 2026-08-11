@@ -1,6 +1,8 @@
-# pnpm
+# pdf-viewer
 
 ## Overview
+
+A minimal PDF viewer.
 
 ## Features
 
@@ -9,3 +11,8 @@
 ## Usage
 
 ## Directory Structure
+
+```
+.
+└── frontend/   # Vite + React PDF viewer
+```
