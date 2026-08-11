@@ -4,7 +4,7 @@ _: {
     {
       checks.tests = pkgs.stdenvNoCC.mkDerivation {
         name = "tests";
-        src = ./..;
+        src = ../frontend;
 
         nativeBuildInputs = [
           config.nodejsPackage

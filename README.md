@@ -9,3 +9,5 @@
 ## Usage
 
 ## Directory Structure
+
+- `frontend/` - Vite + React PDF viewer

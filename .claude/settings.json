@@ -1,6 +1,6 @@
 {
 	"permissions": {
-		"ask": ["Edit(./.oxlintrc.json)", "Edit(./package.json)"]
+		"ask": ["Edit(./frontend/.oxlintrc.json)", "Edit(./frontend/package.json)"]
 	},
 	"hooks": {
 		"PostToolUse": [
@@ -9,7 +9,7 @@
 				"hooks": [
 					{
 						"type": "command",
-						"command": "cd ${CLAUDE_PROJECT_DIR} && nix flake check && pnpm lint"
+						"command": "cd ${CLAUDE_PROJECT_DIR} && nix flake check && (cd frontend && pnpm lint)"
 					}
 				]
 			}

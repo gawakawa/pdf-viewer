@@ -4,7 +4,7 @@ _: {
     let
       pnpm = config.pnpmPackage;
       nodejs = config.nodejsPackage;
-      src = ./..;
+      src = ../frontend;
 
       pnpmDeps = pkgs.fetchPnpmDeps {
         pname = "pnpm-project-deps";
