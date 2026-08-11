@@ -10,7 +10,7 @@ A minimal PDF viewer.
 
 ## Usage
 
-Open https://pdf-viewer.iota.workers.dev and choose a PDF file.
+Open https://pdf-viewer.i0ta.dev and choose a PDF file.
 
 ## Directory Structure
 
