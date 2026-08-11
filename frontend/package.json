@@ -8,6 +8,8 @@
 		"build": "vite build",
 		"lint": "oxlint",
 		"preview": "vite preview",
+		"preview:cf": "vite build && wrangler dev",
+		"deploy": "vite build && wrangler deploy",
 		"test": "vitest run"
 	},
 	"dependencies": {
@@ -27,6 +29,7 @@
 		"oxlint": "^1.75.0",
 		"oxlint-tsgolint": "^7.0.2001",
 		"vite": "^8.2.0",
-		"vitest": "^4.1.10"
+		"vitest": "^4.1.10",
+		"wrangler": "^4.120.1"
 	}
 }
