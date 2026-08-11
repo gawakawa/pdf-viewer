@@ -1,6 +1,8 @@
-# pnpm
+# pdf-viewer
 
 ## Overview
+
+A minimal PDF viewer.
 
 ## Features
 
