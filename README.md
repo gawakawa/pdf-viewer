@@ -10,4 +10,7 @@
 
 ## Directory Structure
 
-- `frontend/` - Vite + React PDF viewer
+```
+.
+└── frontend/   # Vite + React PDF viewer
+```
