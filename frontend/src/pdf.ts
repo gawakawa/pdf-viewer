@@ -7,8 +7,8 @@ GlobalWorkerOptions.workerSrc = new URL(
 	import.meta.url,
 ).toString();
 
-// ponytail: node_modules への symlink 経由で public/ から配信 (public/cmaps, public/standard_fonts)。
-// dev server のみが対象の v0 では十分。本番ビルドが要る場合は static-copy 相当の仕組みに置き換える。
+// node_modules への symlink 経由で public/ から配信 (public/cmaps, public/standard_fonts)。
+// Vite の copyDir は fs.statSync (symlink を辿る) で判定するため、本番ビルドでも実体がコピーされる。
 const cMapUrl = '/cmaps/';
 const standardFontDataUrl = '/standard_fonts/';
 
