@@ -8,6 +8,8 @@
 		"build": "vite build",
 		"lint": "oxlint",
 		"preview": "vite preview",
+		"preview:cf": "vite build && wrangler dev",
+		"deploy": "vite build && wrangler deploy",
 		"test": "vitest run"
 	},
 	"dependencies": {

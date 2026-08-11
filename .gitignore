@@ -27,3 +27,6 @@ dist-ssr
 result
 .mcp.json
 .pre-commit-config.yaml
+
+# Wrangler local state
+.wrangler/
