@@ -11,7 +11,7 @@ _: {
         version = "1.0.0";
         inherit src pnpm;
         fetcherVersion = 3;
-        hash = "sha256-KC2s9d142b6ygMVPwBLb1xwfOT4t0hwLbExgl+7L+04=";
+        hash = "sha256-In3ZDIA85VNPyowRGDGyT1T80Cyee/u59l7Gx8/+IZk=";
       };
 
       nodeModules = pkgs.stdenvNoCC.mkDerivation {
