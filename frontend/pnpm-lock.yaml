@@ -40,8 +40,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       eslint-plugin-react-you-might-not-need-an-effect:
-        specifier: ^1.0.1
-        version: 1.0.1(eslint@10.8.1)
+        specifier: ^1.0.2
+        version: 1.0.2(eslint@10.8.1)
       oxlint:
         specifier: ^1.75.0
         version: 1.77.0(oxlint-tsgolint@7.0.2001)
@@ -1100,8 +1100,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-plugin-react-you-might-not-need-an-effect@1.0.1:
-    resolution: {integrity: sha512-oOhQTYhor88Xp8RVytq25tvBfiAjU0r9SCDC51Qop+3Wg5BR1xGMAkM+/dV4MZbcMhdaU1L9bkv6LC95JmiTig==}
+  eslint-plugin-react-you-might-not-need-an-effect@1.0.2:
+    resolution: {integrity: sha512-HgYol2zhH3KbnW9Q4FY/FcIINbsYVL6rwQESChqBC2s9SLWtw1wg05+J7SCrr3BfQpNY2ReYhf8xjpd2JhKJOQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -2413,7 +2413,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-plugin-react-you-might-not-need-an-effect@1.0.1(eslint@10.8.1):
+  eslint-plugin-react-you-might-not-need-an-effect@1.0.2(eslint@10.8.1):
     dependencies:
       eslint: 10.8.1
       globals: 16.5.0
