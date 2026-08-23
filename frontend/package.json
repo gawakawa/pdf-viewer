@@ -30,6 +30,6 @@
 		"oxlint-tsgolint": "^7.0.2001",
 		"vite": "^8.2.0",
 		"vitest": "^4.1.10",
-		"wrangler": "^4.120.1"
+		"wrangler": "^4.123.0"
 	}
 }
